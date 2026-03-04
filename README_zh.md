@@ -49,7 +49,7 @@ git submodule update --init --recursive
 ### 3. 构建虚拟工作台镜像
 
 ```bash
-# 构建Dockpin虚拟工作台镜像
+# 构建Dockpin虚拟工作台镜像，支持的容器镜像为 bench/image/Dockpin/Dockerfile 目录下的目录名
 make build_dockpin
 
 # 构建Virt-AArch64虚拟工作台镜像
@@ -63,12 +63,12 @@ make run_virt-aarch64
 
 ```bash
 # 构建默认镜像(默认会自动进入容器中执行，并在build目录中执行构建)
-make image_build
+make build
 
 # 安装默认（由 IMAGE_BUILD_LIST 变量指定）镜像
-make image_install
+make install
 
-# 安装BusyBox(默认安装到output目录)
+# 安装BusyBox(默认安装到output目录)，支持的系统镜像为 config/image 目录下的目录名
 make busybox_install
 ```
 

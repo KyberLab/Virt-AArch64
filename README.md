@@ -46,7 +46,7 @@ git submodule update --init --recursive
 ### 3. Build Virtual Workbench Image
 
 ```bash
-# Build Dockpin virtual workbench image
+# Build Dockpin virtual workbench image, supported container images are directory names under bench/image/Dockpin/Dockerfile directory
 make build_dockpin
 
 # Build Virt-AArch64 virtual workbench image
@@ -60,12 +60,12 @@ make run_virt-aarch64
 
 ```bash
 # Build default image (will automatically enter container and execute in build directory by default)
-make image_build
+make build
 
 # Install default image (specified by IMAGE_BUILD_LIST variable)
-make image_install
+make install
 
-# Install BusyBox (default installation to output directory)
+# Install BusyBox (default installation to output directory), supported system images are directory names under config/image directory
 make busybox_install
 ```
 
