@@ -69,3 +69,16 @@ IMAGE_EMU_REF				?= master
 endif
 
 
+
+###############################################################################
+# Qemu Repo Config
+
+IMAGE_QEMU_URL				?= $(REPO_URL_GIT_BASE)/qemu.git
+
+ifneq ($(BUILD_TYPE_STR),release)
+IMAGE_QEMU_REF				?= kyberlab/v9.2.2/develop
+else
+IMAGE_QEMU_REF				?= v9.2.2
+endif
+
+
