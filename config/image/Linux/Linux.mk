@@ -19,7 +19,7 @@ IMAGE_FETCH_REF				:= $(IMAGE_LINUX_REF)
 IMAGE_PATCH_OPTS			:= 
 
 # (Required) Config options
-IMAGE_CONFIG_OPTS			:= defconfig
+IMAGE_CONFIG_OPTS			:= kyberlab_defconfig
 
 
 # (Optional) Build options
@@ -54,13 +54,13 @@ IMAGE_EXPORT_ENV			+= CROSS_COMPILE=aarch64-none-elf-
 # $(2) config path
 # $(3) build path
 # $(4) install path
-define image_postrun_config
-	$(Q)$(call xprint_title,	"Image Post-Run Config",$(BG_YELLOW))
-	$(Q)$(call xprint_value,	"Config Options",	$(1),$(BG_PURPLE))
-	$(Q)$(call xprint_value,	"Config Path",		$(2),$(BG_PURPLE))
-	$(Q)$(call xprint_value,	"Build Path",		$(3),$(BG_PURPLE))
-	$(Q)$(call xprint_value,	"Install Path",		$(4),$(BG_PURPLE))
-	$(Q)$(call xprint_filled,$(BG_PURPLE))
-	$(Q)cd $(3) && sed -i 's/.*CONFIG_BLK_DEV_RAM[ =].*/CONFIG_BLK_DEV_RAM=y/g' build/.config
-endef
+#define image_postrun_config
+#	$(Q)$(call xprint_title,	"Image Post-Run Config",$(BG_YELLOW))
+#	$(Q)$(call xprint_value,	"Config Options",	$(1),$(BG_PURPLE))
+#	$(Q)$(call xprint_value,	"Config Path",		$(2),$(BG_PURPLE))
+#	$(Q)$(call xprint_value,	"Build Path",		$(3),$(BG_PURPLE))
+#	$(Q)$(call xprint_value,	"Install Path",		$(4),$(BG_PURPLE))
+#	$(Q)$(call xprint_filled,$(BG_PURPLE))
+#	$(Q)cd $(3) && sed -i 's/.*CONFIG_BLK_DEV_RAM[ =].*/CONFIG_BLK_DEV_RAM=y/g' build/.config
+#endef
 
