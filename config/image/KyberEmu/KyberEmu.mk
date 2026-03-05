@@ -107,6 +107,6 @@ define image_custom_action
 	$(Q)$(call xprint_value,	"Config Path",		$(2),$($(BG_PURPLE)))
 	$(Q)$(call xprint_value,	"Build Path",		$(3),$($(BG_PURPLE)))
 	$(Q)$(call xprint_value,	"Install Path",		$(4),$($(BG_PURPLE)))
-	$(Q)cd $(3) && $(IMAGE_EXPORT_ENV) $(MAKE) run $(1)
+	$(Q)cd $(3) && $(IMAGE_EXPORT_ENV) $(MAKE) run $(1) $(call make_cmd_vars)
 endef
 
