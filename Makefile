@@ -70,7 +70,7 @@ ifeq ($(BUILD_PLATFORM),qemu)
 .PHONY : run
 
 run :
-	$(Q)cd $(WORKSPACE_ROOT_PATH)/image && $(BUILD_EXPORT_ENV) $(MAKE) kyberemu_action $(call make_cmd_vars)
+	$(Q)cd $(WORKSPACE_ROOT_PATH)/image && $(MAKE) kyberemu_action $(call build_export_env)
 
 endif # ($(BUILD_PLATFORM),qemu)
 endif # ($(shell echo $${BENCH_WORK_PATH}),)
