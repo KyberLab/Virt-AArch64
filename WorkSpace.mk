@@ -10,6 +10,15 @@
 
 $(eval $(call rule_inc,$(WORKSPACE_ROOT_PATH)/config/Default.mk))
 
+#QEMU_GRAPHIC_TYPE			?= none
+#QEMU_GRAPHIC_ARGS			?= -nographic
+
+
+#EMU_RUN_ARGS				:= \
+#	QEMU_GRAPHIC_TYPE=$(QEMU_GRAPHIC_TYPE) \
+#	QEMU_GRAPHIC_ARGS=$(QEMU_GRAPHIC_ARGS) \
+#	$(if $(QEMU_RUN_EXTRAS),QEMU_RUN_EXTRAS=$(QEMU_RUN_EXTRAS))
+
 
 
 ###############################################################################
