@@ -14,6 +14,7 @@ EMU_IMAGE_LIST			:= $(shell ls $(CONFIG_IMAGE_PATH)/*/EmuConfig.mk 2>/dev/null |
 EMU_TARGET_LIST			:= $(foreach image,$(EMU_IMAGE_LIST),emu_$(image))
 EMU_TARGET_LIST			+= $(foreach image,$(EMU_IMAGE_LIST),emu_$(call string_to_lower,$(image)))
 EMU_TARGET_LIST			+= $(foreach image,$(EMU_IMAGE_LIST),emu_$(call string_to_upper,$(image)))
+EMU_TARGET_LIST			:= $(sort $(EMU_TARGET_LIST))
 #$(warning EMU_TARGET_LIST=$(EMU_TARGET_LIST))
 
 define emu_boot_image
