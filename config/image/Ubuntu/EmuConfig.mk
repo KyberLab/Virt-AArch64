@@ -5,6 +5,10 @@
 
 
 
+QEMU_GRAPHIC_TYPE			:= none
+QEMU_GRAPHIC_ARGS			:= -nographic
+
+
 IMAGE_UBUNTU_UEFI_FW		:= QEMU_EFI.fd
 IMAGE_UBUNTU_UEFI_CODE		:= UbuntuPFlash0.img
 IMAGE_UBUNTU_UEFI_DATA		:= UbuntuPFlash1.img
@@ -15,7 +19,6 @@ IMAGE_UBUNTU_SYSTEM			:= UbuntuSystem.qcow2
 IMAGE_UBUNTU_METADATA		:= UbuntuMetadata.iso
 IMAGE_UBUNTU_USERDATA		:= user-data
 IMAGE_UBUNTU_METADATA		:= meta-data
-
 
 
 IMAGE_BOOT_BIN				?= $(OUTPUT_ROOT_PATH)/$(IMAGE_UBUNTU_SYSTEM)

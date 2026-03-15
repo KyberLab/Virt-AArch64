@@ -5,6 +5,9 @@
 
 
 
+QEMU_GRAPHIC_TYPE			:= none
+QEMU_GRAPHIC_ARGS			:= -nographic
+
 IMAGE_BOOT_BIN				:= $(OUTPUT_ROOT_PATH)/Linux.bin
 
 IMAGE_RUN_ARGS				+= \

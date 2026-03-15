@@ -15,7 +15,9 @@ BUILD_TYPE_NUM				?= 3
 BUILD_TYPE_STR				?= test
 BUILD_VARIANT				?= Community
 
-IMAGE_BUILD_LIST			?= U-Boot Linux BusyBox BuildRoot Ubuntu KyberEmu Xen Yocto
-IMAGE_DEPEND_LIST			?= Yocto:Xen
+IMAGE_BUILD_LIST			?= U-Boot Linux BusyBox BuildRoot Ubuntu KyberEmu
+IMAGE_DEPEND_LIST			?= 
+
+BENCH_IMG_DEFAULT			?= $(BUILD_BOARD)
 
 
