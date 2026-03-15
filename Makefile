@@ -64,14 +64,5 @@ $(eval $(call rule_inc,$(WORKSPACE_ROOT_PATH)/image/Build.mk))
 ###############################################################################
 # Emulator Rules
 
-ifneq ($(shell echo $${BENCH_WORK_PATH}),)
-ifeq ($(BUILD_PLATFORM),qemu)
-
-.PHONY : run
-
-run :
-	$(Q)cd $(WORKSPACE_ROOT_PATH)/image && $(MAKE) kyberemu_action $(call build_export_env) $(EMU_RUN_ARGS)
-
-endif # ($(BUILD_PLATFORM),qemu)
-endif # ($(shell echo $${BENCH_WORK_PATH}),)
+$(eval $(call rule_inc,$(WORKSPACE_ROOT_PATH)/config/Emulator.mk))
 

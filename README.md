@@ -73,10 +73,10 @@ make busybox_install
 
 ```bash
 # Run default image
-make run
+make emu
 
 # Run BuildRoot image
-make run QEMU_BOOT_IMAGE=BuildRoot
+make emu QEMU_BOOT_IMAGE=BuildRoot
 ```
 
 ## Directory Structure

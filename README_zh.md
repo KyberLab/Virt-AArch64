@@ -76,10 +76,10 @@ make busybox_install
 
 ```bash
 # 运行默认镜像
-make run
+make emu
 
 # 运行BuildRoot镜像
-make run QEMU_BOOT_IMAGE=BuildRoot
+make emu QEMU_BOOT_IMAGE=BuildRoot
 ```
 
 ## 目录结构
