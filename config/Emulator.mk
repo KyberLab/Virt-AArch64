@@ -1,4 +1,4 @@
-#                                 KyberVirt
+#                                 KyberLab
 # Copyright (c) 2025-2026, Kyber Development Team, all right reserved.
 #
 ifneq ($(shell echo $${BENCH_WORK_PATH}),)

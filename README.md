@@ -76,7 +76,7 @@ make busybox_install
 make emu
 
 # Run BuildRoot image
-make emu QEMU_BOOT_IMAGE=BuildRoot
+make emu_buildroot
 ```
 
 ## Directory Structure

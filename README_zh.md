@@ -79,7 +79,7 @@ make busybox_install
 make emu
 
 # 运行BuildRoot镜像
-make emu QEMU_BOOT_IMAGE=BuildRoot
+make emu_buildroot
 ```
 
 ## 目录结构
