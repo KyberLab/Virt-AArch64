@@ -68,7 +68,7 @@ define yocto_image_create_helper
 	$(IQ)sudo cp -v $(7)/build/tmp/deploy/images/qemuarm64/Image /mnt/boot/Image
 	$(IQ)sudo cp -v $(7)/build/tmp/deploy/images/qemuarm64/Image-initramfs-qemuarm64.bin /mnt/boot/initramfs.bin
 	$(IQ)sudo cp -v $(7)/build/tmp/deploy/images/qemuarm64/xen-qemuarm64.efi /mnt/boot/xen-qemuarm64.efi
-	$(IQ)sudo cp -v $(7)/{grub.cfg,xen.cfg,virt-aarch64.dtb} /mnt/boot/
+	$(IQ)sudo cp -v $(7)/{grubaa64.efi,grub.cfg,xen.cfg,virt-aarch64.dtb} /mnt/boot/
 	$(IQ)sudo cp -v /mnt/boot/* /mnt/$(YOCTO_BUILD_TYPE)/boot/
 	$(IQ)sudo install -v -m 755 $(7)/init.sh /mnt/$(YOCTO_BUILD_TYPE)/init.sh
 	$(IQ)sudo mkdir -v /mnt/$(YOCTO_BUILD_TYPE)/etc/init.d/

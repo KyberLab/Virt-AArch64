@@ -63,6 +63,8 @@ IMAGE_BUILD_OPTS			:=
 #IMAGE_INSTALL_METHOD		:= 
 IMAGE_INSTALL_OPTS			:= 
 IMAGE_INSTALL_LIST			:= build/$(IMAGE_YOCTO_FILE_NAME):$(IMAGE_YOCTO_FILE_NAME) build/tmp/deploy/images/qemuarm64/xen-qemuarm64.efi:xen-qemuarm64.efi
+IMAGE_INSTALL_LIST			+= build/tmp/deploy/images/qemuarm64/Image:Yocto-Image.bin
+IMAGE_INSTALL_LIST			+= build/tmp/deploy/images/qemuarm64/Image-initramfs-qemuarm64.bin:Yocto-Initramfs.bin
 
 # (Optional) Package options
 #IMAGE_PACKAGE_METHOD		:= 
