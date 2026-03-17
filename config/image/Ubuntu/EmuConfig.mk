@@ -4,6 +4,10 @@
 
 
 
+# Mount host workspace
+# mkdir /ws
+# mount -t 9p -o trans=virtio,version=9p2000.L,posixacl,cache=loose host /ws
+
 
 QEMU_GRAPHIC_TYPE			:= none
 QEMU_GRAPHIC_ARGS			:= -nographic

@@ -1,0 +1,18 @@
+#!/bin/sh
+# /etc/init.d/rcK - BusyBox shutdown cleanup script
+
+echo "Shutting down system..."
+
+# 1. Stop services
+killall dropbear syslogd klogd 2>/dev/null
+
+# 2. Unmount file systems
+umount /dev/pts
+umount /proc
+umount /sys
+umount /tmp
+
+# 3. Remount root filesystem as read-only (prevent data corruption)
+mount -o remount,ro /
+
+echo "Shutdown completed!"

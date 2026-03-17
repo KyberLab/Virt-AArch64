@@ -3,7 +3,11 @@
 #
 
 
-
+# First run config
+# UEFI # bcfg boot dump
+# UEFI # bcfg boot rm 1
+# UEFI $ bcfg boot add 1 fs0:\xen-qemuarm64.efi "Xen Hypervisor"
+# UEFI $ reset
 
 
 QEMU_MACHINE_TYPE			:= virt,gic-version=3,virtualization=on,iommu=smmuv3,secure=off

@@ -5,6 +5,13 @@
 
 
 
+# $ make op-tee_action
+# QEMU 5.1.0 monitor - type 'help' for more information
+# (qemu) c
+# Normal World $ xtest
+
+
+
 # (Required) Build type
 IMAGE_BUILD_TYPE			:= Custom
 

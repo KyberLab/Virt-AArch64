@@ -1,0 +1,20 @@
+# /etc/inittab - BusyBox init core configuration
+# Format: <id>:<runlevels>:<action>:<process>
+
+# 1. System initialization entry (execute rcS script first)
+::sysinit:/etc/init.d/rcS
+
+# 2. Enable serial terminal (adapt for QEMU/development board, adjust tty device based on hardware)
+ttyAMA0::respawn:/sbin/getty -L ttyAMA0 115200 vt100  # QEMU virt machine serial port
+# ttyS0::respawn:/sbin/getty -L ttyS0 115200 vt100    # Physical development board serial port (e.g., Raspberry Pi)
+
+# 3. Console terminal (backup)
+console::respawn:/sbin/getty -L console 115200 vt100
+
+# 4. Shutdown/reboot handling
+::shutdown:/etc/init.d/rcK
+::restart:/sbin/init
+
+# 5. Exception exit handling (prevent init process from crashing)
+::ctrlaltdel:/sbin/reboot
+::powerfail:/sbin/init

@@ -158,6 +158,6 @@ endef
 # $(3) build path
 # $(4) install path
 define image_custom_action
-	$(IQ)cd $(3) && $(if $(yocto_image_$(1)),$(call yocto_image_$(1),$(3)/build/$(IMAGE_YOCTO_FILE_NAME),$(YOCTO_IMAGE_FORMAT),$(YOCTO_IMAGE_SIZE),$(YOCTO_IMAGE_PART_TABLE),$(YOCTO_IMAGE_DEVICE_FILE),$(YOCTO_IMAGE_DEVICE_NAME),$(3)),:)
+	$(IQ)cd $(3) && $(if $(yocto_image_$(1)),$(call yocto_image_$(1),$(IMAGE_BOOT_BIN),$(YOCTO_IMAGE_FORMAT),$(YOCTO_IMAGE_SIZE),$(YOCTO_IMAGE_PART_TABLE),$(YOCTO_IMAGE_DEVICE_FILE),$(YOCTO_IMAGE_DEVICE_NAME),$(3)),:)
 endef
 
