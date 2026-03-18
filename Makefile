@@ -57,12 +57,5 @@ endif
 ###############################################################################
 # Image Build Rules
 
-$(eval $(call rule_inc,$(WORKSPACE_ROOT_PATH)/image/Build.mk))
-
-
-
-###############################################################################
-# Emulator Rules
-
-$(eval $(call rule_inc,$(WORKSPACE_ROOT_PATH)/config/Emulator.mk))
+$(eval $(call rule_inc,$(WORKSPACE_ROOT_PATH)/image/Main.mk))
 
