@@ -90,14 +90,23 @@ KyberLab Virt-AArch64/
 │   ├── image/       # 工作台镜像配置
 │   ├── rules/       # 构建规则和工具
 │   └── *.mk         # 工作台构建和运行脚本
-├── config/          # 配置目录
+├── config/          # 配置目录（子仓库）
+│   ├── Default.mk   # 构建默认配置
+│   ├── Network.mk   # 网络和仓库URL配置
+│   ├── Repo.mk      # 各镜像的仓库配置
+│   ├── README.md    # 配置目录说明
 │   └── image/       # 构建目标（Goal）配置
 │       ├── BuildRoot/  # BuildRoot 配置
 │       ├── BusyBox/    # BusyBox 配置
+│       ├── EDK2/       # EDK2 UEFI 配置
 │       ├── KyberEmu/   # 模拟器配置
 │       ├── Linux/      # Linux 配置
+│       ├── OP-TEE/     # OP-TEE 配置
+│       ├── Qemu/       # Qemu 配置
 │       ├── U-Boot/     # U-Boot 配置
-│       └── Ubuntu/     # Ubuntu 配置
+│       ├── Ubuntu/     # Ubuntu 配置
+│       ├── Xen/        # Xen 配置
+│       └── Yocto/      # Yocto 配置
 ├── image/           # 镜像构建目录
 │   ├── goal/        # 构建目标
 │   ├── method/      # 构建方法（Method）配置
@@ -175,10 +184,16 @@ KyberLab Virt-AArch64/
 
 - **BuildRoot**：BuildRoot 配置；
 - **BusyBox**：BusyBox 配置；
+- **CustomDemo**：自定义演示配置；
+- **EDK2**：EDK2 UEFI 配置；
 - **KyberEmu**：模拟器配置；
 - **Linux**：Linux 配置；
+- **OP-TEE**：OP-TEE 安全框架配置；
+- **Qemu**：Qemu 配置；
 - **U-Boot**：U-Boot 配置；
-- **Ubuntu**：Ubuntu 系统配置。
+- **Ubuntu**：Ubuntu 系统配置；
+- **Xen**：Xen 虚拟机配置；
+- **Yocto**：Yocto 系统配置。
 
 
 ### 构建方法

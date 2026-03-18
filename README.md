@@ -87,14 +87,23 @@ KyberLab Virt-AArch64/
 │   ├── image/       # Workbench image configurations
 │   ├── rules/       # Build rules and utilities
 │   └── *.mk         # Workbench build and run scripts
-├── config/          # Configuration directory
+├── config/          # Configuration directory (submodule)
+│   ├── Default.mk   # Build default configuration
+│   ├── Network.mk   # Network and repository URL configuration
+│   ├── Repo.mk      # Repository configuration for each image
+│   ├── README.md    # Configuration directory documentation
 │   └── image/       # Build goal configurations
 │       ├── BuildRoot/  # BuildRoot configuration
 │       ├── BusyBox/    # BusyBox configuration
+│       ├── EDK2/       # EDK2 UEFI configuration
 │       ├── KyberEmu/   # Emulator configuration
 │       ├── Linux/      # Linux configuration
+│       ├── OP-TEE/     # OP-TEE configuration
+│       ├── Qemu/       # Qemu configuration
 │       ├── U-Boot/     # U-Boot configuration
-│       └── Ubuntu/     # Ubuntu configuration
+│       ├── Ubuntu/     # Ubuntu configuration
+│       ├── Xen/        # Xen configuration
+│       └── Yocto/      # Yocto configuration
 ├── image/           # Image building directory
 │   ├── goal/        # Build goals
 │   ├── method/      # Build method configurations
@@ -171,10 +180,16 @@ The project supports multiple image builds, located in the `config/image/` direc
 
 - **BuildRoot**: BuildRoot configuration;
 - **BusyBox**: BusyBox configuration;
+- **CustomDemo**: Custom demo configuration;
+- **EDK2**: EDK2 UEFI configuration;
 - **KyberEmu**: Emulator configuration;
 - **Linux**: Linux configuration;
+- **OP-TEE**: OP-TEE security framework configuration;
+- **Qemu**: Qemu configuration;
 - **U-Boot**: U-Boot configuration;
-- **Ubuntu**: Ubuntu system configuration.
+- **Ubuntu**: Ubuntu system configuration;
+- **Xen**: Xen hypervisor configuration;
+- **Yocto**: Yocto system configuration.
 
 ### Build Methods
 
