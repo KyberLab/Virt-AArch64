@@ -1,0 +1,21 @@
+{
+	"mcpServers": {
+	  "make-build-mcp": {
+		"name": "Make 构建工具 MCP",
+		"description": "执行开源项目的 make 命令（build/clean/test 等），支持自定义参数",
+		"command": "/opt/virt/KyberLab/Virt-AArch64/run-make-with-env.sh",
+		"args": [],
+		"cwd": "/opt/virt/KyberLab/Virt-AArch64",
+		"env": {
+		  "PATH": "/usr/bin:/bin:/usr/sbin:/sbin"
+		},
+		"stdio": {
+		  "encoding": "utf-8",
+		  "timeout": 300000
+		},
+		"allowedCommands": [
+		  "build", "clean", "test", "install", "dist", "docs"
+		]
+	  }
+	}
+  }
